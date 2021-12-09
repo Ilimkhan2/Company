@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервис</title>
+    <link rel="short icon" href="./img/IT-компания «ISOFT».png">
+    <link rel="stylesheet" href="./css/vice.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+<body>
+    <div class="loader_bg">
+        <h1 class="loader"> <span>Inclusive</span> soft</h1> 
+    </div>
+
+    <nav class="navber">
+        <div class="content">
+            <div class="logo"><a href="#"><img src="./img/IT-компания «ISOFT» белый.png" alt=""></a></div>
+            <ul class="menu-lier">
+                <div class="icon cancel-ber">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="Portfolio.html">Портфолио</a></li>
+                <li><a href="Shop.html">Магазин</a></li>
+                <li><a href="About.html">О нас</a></li>
+                <li><a href="Blog.html">Блог</a></li>
+                <li><a href="Service.html">Сервис</a></li>
+                <li><a href="Contacts.html">Контакты</a></li>
+            </ul> 
+            <div class="icon menu-ber">
+                <i class="fa fa-align-justify" aria-hidden="true"></i>
+            </div> 
+        </div>
+    </nav>
+
+    <div class="banner">
+        <div class="tenner">
+            <h1>Сервис</h1>
+        </div>
+    </div>
+    <div class="tier">
+        <div class="max-text">
+            <h1>РЕМОНТ</h1>
+            <p>Ремонт и обслуживание оргтехники — хоть и не основное, но всё же немаловажное направление услуг сервисного центра iSoft</p>
+            <p>Наши инженеры выполняют ремонт большинства принтеров и негабаритной оргтехники. Большой опыт позволяет решать даже самые сложные проблемы в кратчайшие сроки, а лояльный подход к клиентам делает ремонт не только качественным, но и выгодным!</p>
+        </div>
+        <div class="wrapper">
+            <div class="contaien">
+                <div class="card">
+                    <a href="#">
+                        <img src="./img/Заправка.png">
+                        <div class="info">
+                            <h1>Заправка Принтера</h1>
+                            <p>В процессе заправки для начала нужно расширить вентиляционное отверстие, затем ввести в него иглу шприца до середины и медленно закачать чернила. В цветных картриджах нужно убрать верхнюю крышку и с помощью шприца ввести краску в три отделения. Потом прикрепить крышку на место… и все. Выводы. Как видите, заправить картридж для струйного принтера совсем не так сложно, как может показаться.</p>
+                            <a class="button" href="#">Позвонить</a>
+                        </div>
+                    </a>
+                    <a class="more"></a>
+                </div>
+                <div class="card">
+                    <a href="#">
+                        <img src="./img/Установка по windows.png">
+                        <div class="info">
+                            <h1>Установка ПО Windows антивирус</h1>
+                            <p>Windows Defender Antivirus — штатное антивирусное программное обеспечение (ПО), не требующее установки и выполняющее роль базовой защиты от вредоносного кода. Впервые утилита появилась в Windows XP, после дорабатывалась и неоднократно обновлялась в новых версиях ОС.</p>
+                            <a class="button" href="#">Позвонить</a>
+                        </div>
+                    </a>
+                    <a class="more"></a>
+                </div>
+            </div>
+            <div class="contaien">
+                <div class="card_log">
+                    <a href="#">
+                        <img src="./img/Обслуживание.png">
+                        <div class="info">
+                            <h1>Быстрая и качественное обслуживание</h1>
+                            <a class="button" href="#">Позвонить</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="card_log">
+                    <a href="#">
+                        <img src="./img/Компьютер и ноутбук.png">
+                        <div class="info">
+                            <h1>Компьютер и ноутбук</h1>
+                            <a class="button" href="#">Позвонить</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>      
+    
+    
+
+
+
+
+
+    <script>
+        let more = document.querySelectorAll(".more");
+        for (let i = 0; i<more.length; i++){
+            more[i].addEventListener('click', function(){
+                more[i].parentNode.classList.toggle('active');
+            })
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+        }, 1100);
+    </script>
+
+    <script>
+        const navBer = document.querySelector(".navber");
+        const menu = document.querySelector(".menu-lier");
+        const menuBer = document.querySelector(".menu-ber");
+        const cancelBer = document.querySelector(".cancel-ber");
+
+        menuBer.onclick = () =>{
+            menu.classList.add("sticve");
+            menuBer.classList.add("hide");
+        }
+        cancelBer.onclick = () =>{
+            menu.classList.remove("sticve");
+            menuBer.classList.remove("hide");
+        }
+        window.onscroll = () =>{
+            this.scrollY > 20 ? navBer.classList.add("actcve") : navBer.classList.remove("actcve");
+        }
+</script>
+</body>
+</html>

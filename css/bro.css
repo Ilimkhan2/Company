@@ -1,0 +1,551 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.icon{
+    font-size: 25px;
+    color: #FF0000;
+    cursor: pointer;
+    display: none;
+}
+.icon.cancel-ber{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+.navber .content{
+    max-width: 1450px;
+    margin: auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navber{
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    padding: 5px 0;
+    background: #000;
+    transition: all .3s ease;
+}
+.navber.actcve{
+    background: #000;
+    padding: 15px 0;
+    transition: all .3s ease;
+}
+.navber .content .menu-lier{
+    display: inline-flex;
+}
+.navber .content .logo img{
+    width: 60px;
+}
+.navber .content .logo a{
+    font-size: 30px;
+    font-weight: 800;
+}
+.navber .content .menu-lier li{ 
+    margin-left: 7px;
+}
+.navber .content .menu-lier li a{ 
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 10px 20px;
+    transition: all .3s ease;
+}
+.navber .content .menu-lier li a:hover{
+    color: #FF0000;
+    border: 1px solid #FF0000;
+    border-radius: 50px;
+    transition: all .3s ease;
+}
+
+.container{
+    width: 100%;
+}
+.container .wrapper{
+    width: 100%;
+    height: 117vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.container .wrapper .all-images{
+    display: flex;
+    height: 80vh;
+}
+.container .wrapper .sall-images{
+    display: flex;
+    flex-direction: column;
+}
+.container .wrapper .sall-images img{
+    height: 19vh;
+    margin-bottom: 9px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+.container .wrapper .sall-images img:hover{
+    opacity: 1;
+}
+/* .container .wrapper .all-images img{
+    height: 100%;
+} */
+
+.min-tilems{
+    width: 630px;
+    max-width: 100%;
+    margin: 40px 20px 0 20px;
+}
+ .min-tilems h6{
+    font-size: 15px;
+    padding: 45px 0 10px 0;
+    color: rgba(0, 0, 0, 0.75);
+}
+ .min-tilems .py-3{
+    position: relative;
+    font-size: 35px;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+ .min-tilems .py-3::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 80px;
+    background: #FF0000;
+}
+ .min-tilems h2{
+    font-size: 25px;
+    color: #FF0000;
+    padding: 5px 0 0 0;
+    margin-bottom: 35px;
+}
+.min-tilems button{
+    border: none;
+    font-size: 15px;
+    background: #FF0000;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+ .min-tilems button:hover{
+    background: #000;
+    color: #fff;
+    transition: all .3s ease;
+}
+ .min-tilems .text{
+    display: flex;
+    margin-top: 90px;
+}
+ .min-tilems .text .mt-4{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.75);
+}
+ .min-tilems .text a{
+    text-decoration: underline;
+    font-size: 18px;
+    margin-left: 24px;
+    color: rgba(0, 0, 0, 0.75);
+    height: 24px;
+}
+
+.item{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+.item h2{
+    color: #FF0000;
+    padding: 20px 0 15px 0;
+    font-style: italic;
+    font-size: 20px;
+}
+.item h3{
+    font-weight: 400;
+    padding: 0 0 15px 0;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 18px;
+}
+.item p{
+    position: relative;
+    padding-left: 15px;
+    margin: 0 0 8px 0;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 17px;
+}
+.item p::before {
+    border: 1px solid red;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 7px;
+    left: 0;
+    position: absolute;
+    top: 7px;
+    width: 7px;
+}
+
+.modal{
+    position: fixed;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    background-color: #fff;
+    padding: 30px 50px;
+    border-radius: 5px;
+    width: 600px;
+    max-width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.452);
+}
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal-header{
+    padding: 10px 15px 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-header h1{
+    font-size: 30px;
+    font-weight: 800;
+    margin-left: 130px;
+}
+.modal-weader{
+    padding: 10px 15px 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-item{
+    display: flex;
+}
+.modal-item .item-img{
+    text-align: center;
+    width: 45%;
+}
+.modal-item .item-img h2{
+    font-size: 19px;
+    color: rgba(0, 0, 0, 0.75);
+}
+.modal-item .item-img p{
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 800;
+}
+.modal-item .item-img img{
+    width: 85%;
+}
+.modal-item .item-text{
+    margin-top: 35px;
+}
+.modal-item .item-text h2{
+    font-size: 18px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.75);
+}
+.modal-weader h1{
+    font-size: 30px;
+    font-weight: 800;
+    margin-left: 160px;
+}
+.modal-weader .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 25px;
+}
+.modal-header .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 25px;
+}
+.modal-body{
+    display: flex;
+    justify-content: center;
+}
+.modal-body img{
+    width: 45%;
+    object-fit: contain;
+    margin-right: 10px;
+}
+.modal-body .text h2{
+    font-size: 25px;
+    font-weight: 800;
+    color: #FF0000;
+    padding: 40px  0 0 0;
+}
+.modal-body .text p{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 0 0px 0;
+}
+.modal .button{
+    width: 48%;
+    margin: auto;
+    margin-left: 21rem;
+}
+.modal .button button{
+    border: none;
+    font-size: 15px;
+    background: #FF0000;
+    color: #fff;
+    padding: 1rem 2rem;
+    transition: all .3s ease;
+}
+.modal .button button:hover{
+    background: #000;
+    color: #fff;
+    transition: all .3s ease;
+}
+#overlay{
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+#overlay.active{
+    pointer-events: all;
+    opacity: 1;
+}
+.modal__dialogw{
+    width: 350px;
+    text-align: center;
+    position: relative;
+}
+.modal__dialogw .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+}
+.modal__dialogw .row100 .col{
+    position: relative;
+    width: 97%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+.modal__dialogw .row100 .col .inputBox{
+    position: relative;
+    width: 100%;
+    height: 40px;   
+    color: #999;
+}
+.modal__dialogw .row100 .col .inputBox input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #fff;
+    margin-left: -10.8rem;
+}
+.modal__dialogw .row100 .col .inputBox .text_span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.modal__dialogw .row100 .inputBox input:focus + .text_span,
+.modal__dialogw .row100 .inputBox input:valid + .text_span{
+    top: -35px;
+    left: -10px;
+}
+.modal__dialogw .row100 .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #ff0000;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.modal__dialogw .row100 .inputBox input:focus ~ .line,
+.modal__dialogw .row100 .inputBox input:valid ~ .line{
+    height: 100%;
+}
+.modal__dialogw .row100 .cola input{
+    border: none;
+    margin: 1rem 3rem;
+    cursor: pointer;
+    outline: none;
+    background: #ff0000;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 15px;
+    transition: all .3s ease;
+}
+.modal__dialogw .row100 .cola input:hover{
+    background: #000;
+    color: #fff;
+    transition: all .3s ease;
+}
+
+
+@media (max-width: 1050px){
+    .min-tilems .text a{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .item{
+        max-width: 900px;
+        padding: 1rem 2rem;
+    }
+}
+@media (max-width: 900px){
+    .container .wrapper{
+        height: 185vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 60px;
+    }
+    .container .wrapper .sall-images img{
+        height: 20vh;
+    }
+    .main-images img{
+        height: 100%;
+    }
+    .min-tilems .text a{
+        font-size: 18px;
+        margin-left: 20px;
+    }
+}
+@media (max-width: 750px){
+    .icon{
+        display: block;
+    }
+    .icon.hide{
+        display: none;
+    }
+    .navber{
+        background: none;
+    }
+    .navber .content .menu-lier{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        max-width: 400px;
+        height: 100vh;
+        margin-top: 0;
+        padding: 0 40px;
+        text-align: center;
+        transition: all .3s ease;
+        background: #000;
+    }
+    .navber .content .menu-lier.sticve{
+        left: 0;
+    }
+    .navber .content .menu-lier li{
+        margin-top: 35px;
+    }
+    .navber .content .menu-lier li a{
+        font-size: 25px;
+    }
+}
+@media (max-width: 650px){
+    .modal{
+        display: none;
+    }
+    .modall{
+        display: none;
+    }
+}
+@media (max-width: 586px){
+    .container .wrapper{
+        height: 190vh;
+    }
+    .container .wrapper .all-images{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .container .wrapper .sall-images{
+        display: flex;
+        flex-direction: initial;
+    }
+    .min-tilems .text a{
+        display: none;
+    }
+    .main-images{
+        margin: auto;
+    }
+    .item{
+        max-width: 400px;
+    }
+    .min-tilems .media{
+        display: none;
+    }
+}
+@media (max-width: 436px){
+    .navber .content .menu-lier{
+        left: -130%;
+        padding: 0;
+    }
+    .container .wrapper{
+        height: 230vh;
+    }
+    .min-tilems{
+        width: 330px;
+    }
+    .item{
+        max-width: 400px;
+        padding: 1rem 10px;
+    }
+}
+@media (max-width: 378px){
+    .container .wrapper .sall-images img{
+        height: 17vh;
+    }
+    .item{
+        max-width: 290px;
+        padding: 1rem 0;
+    }
+}
+@media (max-width: 320px){
+    .container .wrapper .sall-images img{
+        height: 14vh;
+    }
+    .main-images img{
+        width: 310px;
+    }
+}

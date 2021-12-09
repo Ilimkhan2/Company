@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <link rel="short icon" href="./img/IT-компания «ISOFT».png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+<body>
+    <div class="loader_bg">
+        <h1 class="loader"> <span>Inclusive</span> soft</h1> 
+    </div>
+
+    <nav class="navber">
+        <div class="content">
+            <div class="logo"><a href="#"><img src="./img/IT-компания «ISOFT» белый.png" alt=""></a></div>
+            <ul class="menu-lier">
+                <div class="icon cancel-ber">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="Portfolio.html">Портфолио</a></li>
+                <li><a href="Shop.html">Магазин</a></li>
+                <li><a href="About.html">О нас</a></li>
+                <li><a href="Blog.html">Блог</a></li>
+                <li><a href="Service.html">Сервис</a></li>
+                <li><a href="Contacts.html">Контакты</a></li>
+            </ul> 
+            <div class="icon menu-ber">
+                <i class="fa fa-align-justify" aria-hidden="true"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="banner">
+        <div class="text">
+            <div class="tenner">
+                <h1>Портфолио</h1>
+            </div>
+            <div class="text-p">
+                <p>Мы успешно завершили более 1500 проектов в год и подсчитали</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="Portfolio">
+        <div class="text-box">
+            <p>Наше Портфолио</p>
+            <h1>Наш Последний Проект</h1>
+            <h3>Обеспечение качественного обслуживания и поддержки клиентов так же важно и важно, как и предложение потребителям высококачественных продуктов или услуг. Однако в различных случаях отмечалось, что организации не имеют культуры, ориентированной на клиентов.</h4>
+            <div class="button">
+                <a href="#">Подробнее</a>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="card">
+                <img src="./img/image 18.png">
+                <div class="info">
+                    <h1>Дизайн сайт</h1>
+                    <p>Создание идей и создание бренда, которые важны для людей</p>
+                    <a href="./img/image 18.png" class="btn">Смотреть</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/image 19.png">
+                <div class="info">
+                    <h1>Дизайн сайт</h1>
+                    <p>Создание идей и создание бренда, которые важны для людей</p>
+                    <a href="./img/image 19.png" class="btn">Смотреть</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/image 20.png">
+                <div class="info">
+                    <h1>Дизайн сайт</h1>
+                    <p>Создание идей и создание бренда, которые важны для людей</p>
+                    <a href="./img/image 20.png" class="btn">Смотреть</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/image 21.png">
+                <div class="info">
+                    <h1>Дизайн сайт</h1>
+                    <p>Создание идей и создание бренда, которые важны для людей</p>
+                    <a href="./img/image 21.png" class="btn">Смотреть</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/image 22.png">
+                <div class="info">
+                    <h1>Дизайн сайт</h1>
+                    <p>Создание идей и создание бренда, которые важны для людей</p>
+                    <a href="./img/image 22.png" class="btn">Смотреть</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/image 23.png">
+                <div class="info">
+                    <h1>Дизайн сайт</h1>
+                    <p>Создание идей и создание бренда, которые важны для людей</p>
+                    <a href="./img/image 23.png" class="btn">Смотреть</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+        }, 1100);
+    </script>
+    <script>
+        const navBer = document.querySelector(".navber");
+        const menu = document.querySelector(".menu-lier");
+        const menuBer = document.querySelector(".menu-ber");
+        const cancelBer = document.querySelector(".cancel-ber");
+
+        menuBer.onclick = () =>{
+            menu.classList.add("sticve");
+            menuBer.classList.add("hide");
+        }
+        cancelBer.onclick = () =>{
+            menu.classList.remove("sticve");
+            menuBer.classList.remove("hide");
+        }
+        window.onscroll = () =>{
+            this.scrollY > 20 ? navBer.classList.add("actcve") : navBer.classList.remove("actcve");
+        }
+    </script>
+</body>
+</html>

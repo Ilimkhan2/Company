@@ -1,0 +1,508 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.loader_bg{
+    position: fixed;
+    z-index: 999999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+.loader{
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(30vw - 75px);
+    font-size: 80px;
+}
+.loader{ 
+    width: 21ch; 
+    margin-bottom: 10px; 
+    font-family: monospace; 
+    white-space: nowrap; 
+    overflow: hidden;
+    animation: flashing-border 0.75s step-end infinite,  
+    printed-text 1s steps(21); 
+}
+.loader span{
+    color: #FF0000;
+}
+
+
+
+.icon{
+    font-size: 25px;
+    color: #FF0000;
+    cursor: pointer;
+    display: none;
+}
+.icon.cancel-ber{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+.navber .content{
+    max-width: 1450px;
+    margin: auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navber{
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    padding: 5px 0;
+    background: #000;
+    transition: all .3s ease;
+}
+.navber.actcve{
+    background: #000;
+    padding: 15px 0;
+    transition: all .3s ease;
+}
+.navber .content .menu-lier{
+    display: inline-flex;
+}
+.navber .content .logo img{
+    width: 60px;
+}
+.navber .content .logo a{
+    font-size: 30px;
+    font-weight: 800;
+}
+.navber .content .menu-lier li{ 
+    margin-left: 7px;
+}
+.navber .content .menu-lier li a{ 
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 10px 20px;
+    transition: all .3s ease;
+}
+.navber .content .menu-lier li a:hover{
+    color: #FF0000;
+    border: 1px solid #FF0000;
+    border-radius: 50px;
+    transition: all .3s ease;
+}
+
+
+.banner{
+    max-width: 1450px;
+    width: 100%;
+    height: 18vh;
+    padding: 3.9rem  0 0 0;
+    
+}
+.banner .tenner{
+    text-align: center;
+    max-width: 180px;
+    background: #FF0000;
+    color: #fff;
+    padding: 25px;
+    height: 6vh;
+    margin: 0px 40px;
+    box-shadow: -15px 0px 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.Messages .text{
+    padding: 0 25px;
+    margin: 0 15px;
+}
+.Messages .text h1{
+    font-size: 30px;
+    padding: 17px 0;
+}
+
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-right: 0;
+}
+.flex .map{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+}
+.modal__dialogw{
+    width: 460px;
+    padding: 20px 0 0 0;
+    text-align: center;
+    position: relative;
+    margin: 0px 40px;
+}
+.modal__dialogw .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+    background: #ff0000;
+    padding: 20px 0 0 0;
+}
+.modal__dialogw .row1000{
+    position: relative;
+    width: 100%;
+    display: grid;
+    background: #ff0000;
+}
+.modal__dialogw .row100 .col{
+    position: relative;
+    width: 90%;
+    padding: 0 10px;
+    margin: 30px 0 10px 26px;
+    transition: 0.5s;
+}
+.modal__dialogw .row100 .col .inputBox{
+    position: relative;
+    width: 90%;
+    height: 40px;   
+    color: #fff;
+}
+.modal__dialogw .row100 .col .inputBox input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+    margin-left: -12rem;
+}
+.modal__dialogw .row100 .col .inputBox .text_span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.modal__dialogw .row100 .inputBox input:focus + .text_span,
+.modal__dialogw .row100 .inputBox input:valid + .text_span{
+    top: -35px;
+    left: -10px;
+}
+.modal__dialogw .row100 .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.modal__dialogw .row100 .inputBox input:focus ~ .line,
+.modal__dialogw .row100 .inputBox input:valid ~ .line{
+    height: 100%;
+}
+.modal__dialogw .row100 .cola input{
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background: #000;
+    color: #fff;
+    margin: 1rem 5rem;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+.modal__dialogw .row100 .cola input:hover{
+    background: #fff;
+    color: #000;
+    transition: all .3s ease;
+}
+
+
+.basement{
+    max-width: 1230px;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+}
+.background{
+    position: absolute;
+    background-image: url(../img/Group\ 151.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 43vh;
+    z-index: -1;
+}
+.basement .flex-tiltems{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 90px;
+}
+.basement .flex-tiltems .text-nst{
+    width: 610px;
+}
+.basement .flex-tiltems .text-nst p{
+    font-size: 17px;
+    color: #fff;
+    padding: 10px 10px;
+    opacity: 0.75;
+}
+.basement .flex-tiltems .tiltmes{
+    display: inline-flex;
+}
+.basement .flex-tiltems .tiltmes .textw{
+    text-align: center;
+    padding: 10px 10px;
+}
+.basement .flex-tiltems .tiltmes .textw h1{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;    
+}
+.basement .flex-tiltems .tiltmes .textw a p{
+    font-size: 15px;
+    margin-top: 9px;
+    color: #fff;
+    opacity: 0.75;
+}
+
+
+
+@media (max-width: 1182px){
+    .background{
+        height: 53vh;
+    }
+    .flex .map{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+    }
+}
+@media (max-width: 1177px){
+    .flex .map{
+        right: 0;
+    }
+}
+@media (max-width: 1101px){
+    .flex .map iframe{
+        width: 500px;
+        height: 450px;
+    }
+}
+@media (max-width: 1007px){
+    .basement .flex-tiltems .text-nst {
+        width: 500px;
+    }
+    .flex .map{
+        top: 36%;
+    }
+    .flex .map iframe{
+        width: 415px;
+        height: 400px;
+    }
+}
+@media (max-width: 850px){
+    .loader {
+        position: absolute;
+        top: calc(50vh - 75px);
+        left: calc(22vw - 75px);
+        font-size: 80px;
+    }
+}
+@media (max-width: 750px){
+    .icon{
+        display: block;
+    }
+    .icon.hide{
+        display: none;
+    }
+    .loader {
+        position: absolute;
+        top: calc(50vh - 75px);
+        left: calc(30vw - 75px);
+        font-size: 60px;
+    }
+    .navber{
+        background: none;
+    }
+    .navber .content .menu-lier{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        max-width: 400px;
+        height: 100vh;
+        margin-top: 0;
+        padding: 0 40px;
+        text-align: center;
+        transition: all .3s ease;
+        background: #000;
+    }
+    .navber .content .menu-lier.sticve{
+        left: 0;
+    }
+    .navber .content .menu-lier li{
+        margin-top: 35px;
+    }
+    .navber .content .menu-lier li a{
+        font-size: 25px;
+    }
+
+
+    .flex {
+        justify-content: center;
+    }
+    .flex .map{
+        display: none;
+    }
+    .basement .flex-tiltems{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .background{
+        height: 80vh;
+    }
+    .basement .flex-tiltems .text-nst {
+        text-align: center;
+    }
+}
+@media (max-width: 690px){
+    .loader {
+        position: absolute;
+        top: calc(50vh - 75px);
+        left: calc(22vw - 75px);
+        font-size: 80px;
+    }
+}
+@media (max-width: 634px){
+    .loader {
+        position: absolute;
+        top: calc(50vh - 75px);
+        left: calc(28vw - 75px);
+        font-size: 50px;
+    }
+}
+@media (max-width: 420px){
+    .modal__dialogw .row100 .col .inputBox input {
+        margin-left: -9rem;
+    }
+    .basement .flex-tiltems {
+        width: 97%;
+        margin-top: 104px;
+    }
+    .basement .flex-tiltems .tiltmes .textw h1 {
+        font-size: 14px;
+    }
+    .basement .flex-tiltems .text-nst p {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+    .batter .divber {
+        max-width: 310px;
+    }
+    .navber .content .menu-lier {
+        left: -130%;
+    }
+    .navber .content .menu-lier {
+        padding: 0;
+    }
+    .loader {
+        font-size: 40px;
+    }
+}
+@media (max-width: 360px){
+    .basement .flex-tiltems .tiltmes {
+        display: block;
+    }
+    .modal__dialogw .row100 .col .inputBox input {
+        margin-left: -8.6rem;
+    }
+    .basement .flex-tiltems {
+        width: 97%;
+        margin-top: 104px;
+    }
+    .basement .flex-tiltems .tiltmes .textw h1 {
+        font-size: 21px;
+    }
+    .basement .flex-tiltems .tiltmes .textw a p {
+        font-size: 15px;
+        margin-top: 9px;
+        color: #fff;
+        opacity: 0.75;
+    }
+    .background {
+        height: 110vh;
+    }
+}
+@media (max-width: 320px){
+    
+    .loader {
+        position: absolute;
+        top: calc(50vh - 75px);
+        left: calc(30vw - 75px);
+        font-size: 35px;
+    }
+    .Messages .text h1 {
+        font-size: 25px;
+    }
+    .modal__dialogw .row100 .col .inputBox {
+        width: 97%;
+    }
+    .modal__dialogw .row100 .col {
+        position: relative;
+        width: 90%;
+        padding: 0 10px;
+        margin: 30px 0 10px 9px;
+        transition: 0.5s;
+    }
+    .modal__dialogw .row100 .cola input {
+        padding: 7px 33px;
+    }
+    .basement .flex-tiltems {
+        width: 100%;
+        margin-top: 120px;
+    }
+    .background {
+        height: 119vh;
+    }
+}
+
+@keyframes flashing-border{ 
+    0%{ 
+        border: none; 
+    } 
+    50%{ 
+        border: none; 
+    } 
+    100%{ 
+        border: none; 
+    } 
+} 
+ 
+@keyframes printed-text{ 
+    from{ 
+        width: 0; 
+    } 
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="short icon" href="./img/IT-компания «ISOFT».png">
+    <link rel="stylesheet" href="./css/tacts.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+<body>
+    <div class="loader_bg">
+        <h1 class="loader"> <span>Inclusive</span> soft</h1> 
+    </div>
+
+    <nav class="navber">
+        <div class="content">
+            <div class="logo"><a href="#"><img src="./img/IT-компания «ISOFT» белый.png" alt=""></a></div>
+            <ul class="menu-lier">
+                <div class="icon cancel-ber">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="Portfolio.html">Портфолио</a></li>
+                <li><a href="Shop.html">Магазин</a></li>
+                <li><a href="About.html">О нас</a></li>
+                <li><a href="Blog.html">Блог</a></li>
+                <li><a href="Service.html">Сервис</a></li>
+                <li><a href="Contacts.html">Контакты</a></li>
+            </ul> 
+            <div class="icon menu-ber">
+                <i class="fa fa-align-justify" aria-hidden="true"></i>
+            </div> 
+        </div>
+    </nav>
+
+    <div class="banner">
+        <div class="tenner">
+            <h1>Контакты</h1>
+        </div>
+    </div>
+
+    <div class="Messages">
+        <div class="text">
+            <h1>Готовы приступить к работе</h1>
+            <p>Свяжитесь с нами или создайте учетную запись. мы доступны 24/7</p>
+        </div>
+        <div class="flex">
+            <div class="modal__dialogw">
+                <form action="#">
+                    <div class="row100">
+                        <div class="col">
+                            <div class="inputBox">
+                                <input type="text_span" name="" required="требуемый">
+                                <span class="text_span">Ваш имя</span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="inputBox">
+                                <input type="text_span" name="" required="требуемый">
+                                <span class="text_span">Ваше фамилия</span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="inputBox">
+                                <input type="text_span" name="" required="требуемый">
+                                <span class="text_span">Ваше телефон</span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="row1000">
+                            <div class="cola">
+                                <input type="submit" value="Отправить">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11703.144871149963!2d74.62773038518067!3d42.8351294612302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skg!4v1637312999669!5m2!1sru!2skg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="background">
+        <div class="basement">
+            <div class="flex-tiltems">
+                <div class="text-nst">
+                    <p>Обеспечение качественного обслуживания и поддержки клиентов так же важно и важно, как и предложение потребителям высококачественных продуктов или услуг. Однако в различных случаях отмечалось, что организации не имеют культуры, ориентированной на клиентов.</p>
+                    <p>@2021 D-изофт. Все права защищены компанией Isoft</p>
+                </div>
+                <div class="tiltmes">
+                    <div class="textw">
+                        <h1>Наш Сервис</h1>
+                        <a href="#"><p>Центр Поддержки</p></a>
+                        <a href="#"><p>Сборы и лимиты</p></a>
+                    </div>
+                    <div class="textw">
+                        <h1>Для Пользователя</h1>
+                        <a href="#"><p>Центр Поддержки</p></a>
+                        <a href="#"><p>Сборы и лимиты</p></a>
+                        <a href=""><p>Сообщение об ошибке</p></a>
+                        <a href="#"><p>Для Маркет-Мейкеров</p></a>
+                        <a href="#"><p>Добавить Токам</p></a>
+                    </div>
+                    <div class="textw">
+                        <h1>Cвязаться с нами</h1>
+                        <a href="#"><p>+996 772 000 562</p></a>
+                        <a href="#"><p>hello@it-academy.kg</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+        }, 1100);
+    </script>
+    <script>
+        const navBer = document.querySelector(".navber");
+        const menu = document.querySelector(".menu-lier");
+        const menuBer = document.querySelector(".menu-ber");
+        const cancelBer = document.querySelector(".cancel-ber");
+
+        menuBer.onclick = () =>{
+            menu.classList.add("sticve");
+            menuBer.classList.add("hide");
+        }
+        cancelBer.onclick = () =>{
+            menu.classList.remove("sticve");
+            menuBer.classList.remove("hide");
+        }
+        window.onscroll = () =>{
+            this.scrollY > 20 ? navBer.classList.add("actcve") : navBer.classList.remove("actcve");
+        }
+    </script>
+</body>
+</html>

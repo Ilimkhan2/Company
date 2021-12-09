@@ -1,0 +1,445 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.loader_bg{
+    position: fixed;
+    z-index: 999999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+.loader{
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(30vw - 75px);
+    font-size: 80px;
+}
+.loader{ 
+    width: 21ch; 
+    margin-bottom: 10px; 
+    font-family: monospace; 
+    white-space: nowrap; 
+    overflow: hidden;
+    animation: flashing-border 0.75s step-end infinite,  
+    printed-text 1s steps(21); 
+}
+.loader span{
+    color: #FF0000;
+}
+
+
+
+.icon{
+    font-size: 25px;
+    color: #FF0000;
+    cursor: pointer;
+    display: none;
+}
+.icon.cancel-ber{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.navber .content{
+    max-width: 1450px;
+    margin: auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navber{
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    padding: 5px 0;
+    background: #000;
+    transition: all .3s ease;
+}
+.navber.actcve{
+    background: #000;
+    padding: 15px 0;
+    transition: all .3s ease;
+}
+.navber .content .menu-lier{
+    display: inline-flex;
+}
+.navber .content .logo img{
+    width: 60px;
+}
+.navber .content .logo a{
+    font-size: 30px;
+    font-weight: 800;
+}
+.navber .content .menu-lier li{ 
+    margin-left: 7px;
+}
+.navber .content .menu-lier li a{ 
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 10px 20px;
+    transition: all .3s ease;
+}
+.navber .content .menu-lier li a:hover{
+    color: #FF0000;
+    border: 1px solid #FF0000;
+    border-radius: 50px;
+    transition: all .3s ease;
+}
+
+
+
+.banner{
+    max-width: 1450px;
+    width: 100%;
+    height: 20vh;
+    margin: auto;
+}
+.banner .text{
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    top: 9%;
+    width: 100%;
+    max-width: 1140px;
+}
+.banner .text .tenner{
+    background: #FF0000;
+    color: #fff;
+    padding: 15px 15px 15px 9rem;
+    border-radius: 0 0 20px 0;
+    height: 6vh;
+}
+.banner .text .text-p {
+    padding: 1.5rem;
+    margin: auto;
+}
+.banner .text .text-p p{
+    font-size: 25px;
+    color: #000;
+    font-weight: 800;
+    border-bottom: 1px solid #FF0000;
+}
+
+
+.Portfolio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Portfolio .text-box{
+    max-width: 470px;
+    width: 100%;
+    padding: 5rem 3rem;
+}
+.Portfolio .text-box h1{
+    max-width: 350px;
+    font-size: 30px;
+    margin: 13px 0;
+    padding: 2px 0;
+    font-weight: 800;
+    color: #FF0000;
+    border-bottom: 1px solid;
+}
+.Portfolio .text-box h3 {
+    font-size: 17px;
+    font-weight: 400;
+}
+.Portfolio .text-box h4{
+    font-size: 18px;
+    font-weight: 500;
+}
+.Portfolio .text-box .button{
+    margin: 30px 0 0 0;
+}
+.Portfolio .text-box .button a{
+    font-size: 19px;
+    background: #FF0000;
+    color: #fff;
+    padding: 1rem 4rem;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+.Portfolio .text-box .button a:hover{
+    font-size: 19px;
+    background: #000;
+    color: #fff;
+    padding: 1rem 4rem;
+    transition: all .3s ease;
+}
+
+.Portfolio .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.Portfolio .wrapper .card{
+    width: 180px;
+    height: 130px;
+    padding: 2rem 1rem;
+    margin: 10px;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgb(0 0 0 / 50%);
+    transition: all .3s ease;
+}
+.Portfolio .wrapper .card:hover{
+    transform: translateY(15px);
+}
+.Portfolio .wrapper .card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(176, 0, 0, 0.5),rgb(201, 61, 61));
+    z-index: 2;
+    transition: all .3s ease;
+    opacity: 0;
+}
+.Portfolio .wrapper .card:hover:before{
+    opacity: 1;
+}
+.Portfolio .wrapper .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.Portfolio .wrapper .card .info{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all .3s ease;
+}
+.Portfolio .wrapper .card .info h1{
+    font-size: 25px;
+    margin: 0 0 15px 0;
+    font-weight: 800;
+}
+.Portfolio .wrapper .card .info a{
+    background: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all .3s ease;
+}
+.Portfolio .wrapper .card .info a:hover{
+    color: #FF0000;
+}
+.Portfolio .wrapper .card .info p{
+    margin: 0 0 20px 0;
+}
+.Portfolio .wrapper .card:hover .info{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
+
+
+@media (max-width: 1238px){
+    .Portfolio .text-box .button {
+        width: 400px;
+    }
+}
+@media (max-width: 1100px){
+    .banner .text .text-p p {
+        font-size: 23px;
+    }
+    .Portfolio {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 956px){
+    .Portfolio{
+        flex-wrap: wrap;
+    }
+    .Portfolio .wrapper {
+        margin-bottom: 10px;
+    }
+    .Portfolio .text-box {
+        text-align: center;
+        max-width: 470px;
+        width: 100%;
+        padding: 4rem 3rem;
+    }
+    .Portfolio .text-box h1 {
+        margin: auto;
+    }
+    .Portfolio .text-box .button {
+        width: 400px;
+        margin: auto;
+        padding-top: 40px;
+    }
+    .Portfolio .wrapper .card {
+        width: 230px;
+        height: 170px;
+    }
+}
+@media (max-width: 890px){
+    .loader {
+        left: calc(23vw - 75px);
+    }
+}
+@media (max-width: 750px){
+    .icon{
+        display: block;
+    }
+    .icon.hide{
+        display: none;
+    }
+    .loader {
+        position: absolute;
+        top: calc(50vh - 75px);
+        left: calc(30vw - 75px);
+        font-size: 60px;
+    }
+    .navber{
+        background: none;
+    }
+    .navber .content .menu-lier{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        max-width: 400px;
+        height: 100vh;
+        margin-top: 0;
+        padding: 0 40px;
+        text-align: center;
+        transition: all .3s ease;
+        background: #000;
+    }
+    .navber .content .menu-lier.sticve{
+        left: 0;
+    }
+    .navber .content .menu-lier li{
+        margin-top: 35px;
+    }
+    .navber .content .menu-lier li a{
+        font-size: 25px;
+    }
+}
+@media (max-width: 700px){
+    .banner .text .text-p {
+        padding: 1rem;
+    }
+    .banner .text .text-p p {
+        font-size: 19px;
+    }
+}
+@media (max-width: 690px){
+    .loader {
+        left: calc(22vw - 75px);
+    }
+}
+@media (max-width: 634px){
+    .loader {
+        left: calc(28vw - 75px);
+        font-size: 44px;
+    }
+} 
+@media (max-width: 554px){
+    .banner .text {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .banner .text .text-p p {
+        border-bottom: none;
+    }
+    .Portfolio .wrapper .card {
+        width: 200px;
+    }
+    .Portfolio .text-box {
+        padding: 5rem 0;
+    }
+} 
+@media (max-width: 480px){
+    .navber .content .menu-lier {
+        left: -140%;
+    }
+}
+@media (max-width: 420px){
+    .navber .content .menu-lier {
+        left: -130%;
+    }
+    .navber .content .menu-lier {
+        padding: 0;
+    }
+    .loader {
+        font-size: 43px;
+    }
+}
+@media (max-width: 370px){
+    .loader {
+        font-size: 39px;
+    }
+    .banner .text .tenner {
+        padding: 15px 15px 15px 3rem;
+        height: 5vh;
+    }
+    .banner .text .tenner h1{
+        font-size: 25px;
+    }
+    .Portfolio .text-box {
+        max-width: 320px;
+        padding: 4rem 0rem;
+    }
+    .Portfolio .text-box h1 {
+        font-size: 27px;
+    }
+    .Portfolio .text-box .button {
+        width: 237px;
+    }
+}
+@media (max-width: 320px){
+    .loader {
+        left: calc(30vw - 75px);
+        font-size: 35px;
+    }
+    .banner .text .text-p p {
+        font-size: 18px;
+    }
+}
+
+
+@keyframes flashing-border{ 
+    0%{ 
+        border: none; 
+    } 
+    50%{ 
+        border: none; 
+    } 
+    100%{ 
+        border: none; 
+    } 
+} 
+ 
+@keyframes printed-text{ 
+    from{ 
+        width: 0; 
+    } 
+}

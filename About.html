@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="short icon" href="./img/IT-компания «ISOFT».png">
+    <link rel="stylesheet" href="./css/aype.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+<body>
+    <div class="loader_bg">
+        <h1 class="loader"> <span>Inclusive</span> soft</h1> 
+    </div>
+
+    <nav class="navber">
+        <div class="content">
+            <div class="logo"><a href="#"><img src="./img/IT-компания «ISOFT» белый.png" alt=""></a></div>
+            <ul class="menu-lier">
+                <div class="icon cancel-ber">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="Portfolio.html">Портфолио</a></li>
+                <li><a href="Shop.html">Магазин</a></li>
+                <li><a href="About.html">О нас</a></li>
+                <li><a href="Blog.html">Блог</a></li>
+                <li><a href="Service.html">Сервис</a></li>
+                <li><a href="Contacts.html">Контакты</a></li>
+            </ul> 
+            <div class="icon menu-ber">
+                <i class="fa fa-align-justify" aria-hidden="true"></i>
+            </div> 
+        </div>
+    </nav>
+
+    <div class="banner">
+        <div class="tenner">
+            <h1>О нас</h1>
+        </div>
+    </div>
+
+    <div class="text">
+        <h1> <span>ОсОО "ИнклюзивСофт"</span>, является первой в стране инклюзивной IT-компанией, где помимо здоровых людей, работают люди с ограниченными возможностями здоровья (ЛОВЗ). В нашей компании трудовую и профессиональную реабилитацию проходят люди с ДЦП, колясочники, слабовидящие, слабослышащие, и с синдромом аутизма, выпускники IT Academy при КАРПОУ, Института электроники и телекоммуникаций при КГТУ, Колледжа экономики, дизайна и информационных технологий и т.д. Также по мере своих возможностей, наша компания оказывает поддержку и содействие в вопросах получения образования и трудоустройства ЛОВЗ, заботится об улучшении социально - экономического положения ЛОВЗ.</h1>
+    </div>
+
+
+
+
+
+
+
+
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+        }, 1100);
+    </script>
+    
+    <script>
+        const navBer = document.querySelector(".navber");
+        const menu = document.querySelector(".menu-lier");
+        const menuBer = document.querySelector(".menu-ber");
+        const cancelBer = document.querySelector(".cancel-ber");
+
+        menuBer.onclick = () =>{
+            menu.classList.add("sticve");
+            menuBer.classList.add("hide");
+        }
+        cancelBer.onclick = () =>{
+            menu.classList.remove("sticve");
+            menuBer.classList.remove("hide");
+        }
+        window.onscroll = () =>{
+            this.scrollY > 20 ? navBer.classList.add("actcve") : navBer.classList.remove("actcve");
+        }
+    </script>
+</body>
+</html>

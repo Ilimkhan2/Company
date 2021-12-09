@@ -1,0 +1,476 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+body{
+    background: linear-gradient(270deg, #000000 0%, #F40000 100%);
+}
+.loader_bg{
+    position: fixed;
+    z-index: 999999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+.loader{
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(30vw - 75px);
+    font-size: 80px;
+}
+.loader{ 
+    width: 21ch; 
+    margin-bottom: 10px; 
+    font-family: monospace; 
+    white-space: nowrap; 
+    overflow: hidden;
+    animation: flashing-border 0.75s step-end infinite,  
+    printed-text 1s steps(21); 
+}
+.loader span{
+    color: #FF0000;
+}
+
+
+
+.navber .content{
+    max-width: 1450px;
+    margin: auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navber{
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    padding: 5px 0;
+    background: #fff;
+}
+.navber.actcve{
+    background: #000;
+    padding: 15px 0;
+    transition: all .3s ease;
+}
+.navber .content .menu-lier{
+    display: inline-flex;
+}
+.navber .content .logo img{
+    width: 80px;
+}
+.navber .content .menu-lier li{ 
+    margin-left: 7px;
+}
+.navber .content .menu-lier li a{ 
+    font-size: 18px;
+    font-weight: 800;
+    color: #000;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    transition: all .3s ease;
+}
+.navber .content .menu-lier li a:hover{
+    color: #df0000;
+    border: 1px solid #df0000;
+    border-radius: 50px;
+    transition: all .3s ease;
+}
+
+.batter{
+    max-width: 1450px;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+.batter .divber{
+    position: absolute;
+    z-index: 2;
+    margin: 4rem 6rem;
+    top: 40%;
+    width: 100%;
+    max-width: 640px;
+}
+.batter .divber p{
+    width: 67px;
+    font-size: 15px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.342);
+    padding: 10px 20px;
+}
+.batter .divber h1{
+    font-size: 30px;
+    padding: 17px 0;
+    font-weight: 800;
+    color: #fff;
+}
+.batter .divber .button{
+    padding: 17px 0 0 0;
+}
+.batter .divber .button a{
+    font-size: 19px;
+    background: #fff;
+    color: #EF0000;
+    padding: 1rem 4rem;
+    border-radius: 30px;
+    transition: all .3s ease;
+}
+.batter .divber .button a:hover{
+    font-size: 19px;
+    background: #000;
+    color: #fff;
+    padding: 1rem 4rem;
+    border-radius: 30px;
+    transition: all .3s ease;
+}
+.batter .img{
+    position: absolute;
+    background-image: url(../img/Group\ 227.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 55%;
+    top: 0;
+    right: 0;
+}
+.icon{
+    font-size: 25px;
+    color: #F40000;
+    cursor: pointer;
+    display: none;
+}
+.icon.cancel-ber{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+.modal{
+    position: fixed;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    background-color: #fff;
+    padding: 30px 50px;
+    border-radius: 5px;
+    width: 500px;
+    max-width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.452);
+}
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal-header{
+    padding: 10px 15px 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-header h1{
+    font-size: 30px;
+    font-weight: 800;
+    margin-left: 130px;
+}
+.modal-weader{
+    padding: 10px 15px 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-item{
+    display: flex;
+}
+.modal-item .item-text{
+    margin-top: 35px;
+}
+.modal-item .item-text h2{
+    font-size: 18px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.75);
+}
+.modal-weader h1{
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+}
+.modal-weader .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 25px;
+}
+.modal-header .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 25px;
+}
+.modal-body{
+    display: flex;
+    justify-content: center;
+}
+.modal-body img{
+    width: 45%;
+    object-fit: contain;
+    margin-right: 10px;
+}
+.modal-body .text h2{
+    font-size: 25px;
+    font-weight: 800;
+    color: #FF0000;
+    padding: 40px  0 0 0;
+}
+.modal-body .text p{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 0 0px 0;
+}
+.modal .button{
+    width: 48%;
+    margin: auto;
+    margin-left: 21rem;
+}
+.modal .button button{
+    border: none;
+    font-size: 15px;
+    background: #FF0000;
+    color: #fff;
+    padding: 1rem 2rem;
+    transition: all .3s ease;
+}
+.modal .button button:hover{
+    background: #000;
+    color: #fff;
+    transition: all .3s ease;
+}
+#overlay{
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+#overlay.active{
+    pointer-events: all;
+    opacity: 1;
+}
+.modal__dialogw{
+    width: 500px;
+    text-align: center;
+    position: relative;
+}
+.modal__dialogw .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+}
+.modal__dialogw .row100 .col{
+    position: relative;
+    width: 97%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+.modal__dialogw .row100 .col .inputBox{
+    position: relative;
+    width: 100%;
+    height: 40px;   
+    color: #999;
+}
+.modal__dialogw .row100 .col .inputBox input{
+    position: absolute;
+    width: 96%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #fff;
+    margin-left: -15rem;
+}
+.modal__dialogw .row100 .col .inputBox .text_span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.modal__dialogw .row100 .inputBox input:focus + .text_span,
+.modal__dialogw .row100 .inputBox input:valid + .text_span{
+    top: -35px;
+    left: -10px;
+}
+.modal__dialogw .row100 .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #ff0000;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.modal__dialogw .row100 .inputBox input:focus ~ .line,
+.modal__dialogw .row100 .inputBox input:valid ~ .line{
+    height: 100%;
+}
+.modal__dialogw .row100 .cola input{
+    border: none;
+    margin: 1rem 3rem;
+    cursor: pointer;
+    outline: none;
+    background: #ff0000;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 15px;
+    transition: all .3s ease;
+    border-radius: 30px;
+}
+.modal__dialogw .row100 .cola input:hover{
+    background: #000;
+    color: #fff;
+    transition: all .3s ease;
+}
+
+@media (max-width: 750px){
+    .icon{
+        display: block;
+    }
+    .icon.hide{
+        display: none;
+    }
+    .loader {
+        position: absolute;
+        top: calc(50vh - 75px);
+        left: calc(30vw - 75px);
+        font-size: 60px;
+    }
+    .navber{
+        background: none;
+    }
+    .navber .content .menu-lier{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        max-width: 400px;
+        height: 100vh;
+        margin-top: 0;
+        padding: 0 40px;
+        text-align: center;
+        transition: all .3s ease;
+        background: #fff;
+    }
+    .navber .content .menu-lier.sticve{
+        left: 0;
+    }
+    .navber .content .menu-lier li{
+        margin-top: 35px;
+    }
+    .navber .content .menu-lier li a{
+        font-size: 25px;
+    }
+    .batter .divber {
+        max-width: 620px;
+        margin: 2rem 2rem;
+    }
+    .batter .divber h1 {
+        font-size: 25px;
+    }
+    .batter .divber .button a {
+        padding: 1rem 3rem;
+    }
+    .batter .img {
+        height: 100vh;
+        width: 80%;
+    }
+}
+@media (max-width: 652px){
+    .batter .divber {
+        max-width: 500px;
+    }
+}
+@media (max-width: 534px){
+    .batter .divber {
+        max-width: 420px;
+    }
+    .batter .img {
+        height: 100vh;
+        width: 100%;
+    }
+}
+@media (max-width: 470px){
+    .batter .divber {
+        max-width: 310px;
+    }
+    .navber .content .menu-lier {
+        left: -130%;
+    }
+    .navber .content .menu-lier {
+        padding: 0 35px;
+    }
+    .loader {
+        font-size: 40px;
+    }
+}
+@media (max-width: 360px){
+    .navber .content .menu-lier {
+        padding: 0 0;
+    }
+}
+@media (max-width: 320px){
+    .batter .divber {
+        max-width: 280px;
+    }
+    .navber .content .menu-lier {
+        left: -125%;
+        padding: 0 0px;
+    }
+    .batter .img {
+        height: 100vh;
+        width: 100%;
+    }
+    .loader {
+        font-size: 35px;
+    }
+}
+@keyframes flashing-border{ 
+    0%{ 
+        border: none; 
+    } 
+    50%{ 
+        border: none; 
+    } 
+    100%{ 
+        border: none; 
+    } 
+} 
+ 
+@keyframes printed-text{ 
+    from{ 
+        width: 0; 
+    } 
+}

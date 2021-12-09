@@ -1,0 +1,598 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.loader_bg{
+    position: fixed;
+    z-index: 99999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+.loader{
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(30vw - 75px);
+    font-size: 80px;
+}
+.loader{ 
+    width: 21ch; 
+    margin-bottom: 10px; 
+    font-family: monospace; 
+    white-space: nowrap; 
+    overflow: hidden;
+    animation: flashing-border 0.75s step-end infinite,  
+    printed-text 1s steps(21); 
+}
+.loader span{
+    color: #FF0000;
+}
+
+
+
+.icon{
+    font-size: 25px;
+    color: #FF0000;
+    cursor: pointer;
+    display: none;
+}
+.icon.cancel-ber{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+.navber .content{
+    max-width: 1450px;
+    margin: auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navber{
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    padding: 5px 0;
+    background: #000;
+    transition: all .3s ease;
+}
+.navber.actcve{
+    background: #000;
+    padding: 15px 0;
+    transition: all .3s ease;
+}
+.navber .content .menu-lier{
+    display: inline-flex;
+}
+.navber .content .logo img{
+    width: 60px;
+}
+.navber .content .logo a{
+    font-size: 30px;
+    font-weight: 800;
+}
+.navber .content .menu-lier li{ 
+    margin-left: 7px;
+}
+.navber .content .menu-lier li a{ 
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 10px 20px;
+    transition: all .3s ease;
+}
+.navber .content .menu-lier li a:hover{
+    color: #FF0000;
+    border: 1px solid #FF0000;
+    border-radius: 50px;
+    transition: all .3s ease;
+}
+
+
+.banner{
+    max-width: 1450px;
+    width: 100%;
+    height: 11vh;
+    padding: 3.9rem  0 0 0;
+}
+.banner .tenner{
+    max-width: 180px;
+    background: #FF0000;
+    color: #fff;
+    padding: 15px 15px 15px 9rem;
+    border-radius: 0 0 20px 0;
+    height: 6vh;
+}
+
+
+
+.Portfolio{
+    position: relative;
+    display: flex;
+}
+.Portfolio .text-box{
+    position: sticky;
+    max-width: 470px;
+    width: 100%;
+    top: 8%;
+    height: 60%;
+    padding: 1rem 0 1rem 3rem;
+}
+.Portfolio .text-box h1{
+    max-width: 350px;
+    font-size: 30px;
+    margin: 5px 0;
+    padding: 2px 0;
+    font-weight: 800;
+    color: #FF0000;
+}
+.Portfolio .text-box p{
+    padding: 10px 0 0 0;
+}
+.Portfolio .text-box .button{
+    display: flex;
+    height: 9vh;
+    margin: 30px 0 0 0;
+}
+.Portfolio .text-box .button .number{
+    margin: 0 0 0 20px;
+}
+.Portfolio .text-box .button .number p{
+    padding: 2px 5px;
+}
+.Portfolio .text-box .button button{
+    border: none;
+    font-size: 19px;
+    background: #000;
+    color: #fff;
+    padding: 1rem 4rem;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+.Portfolio .text-box .button button:hover{
+    font-size: 19px;
+    background: #00ca11;
+    color: #fff;
+    padding: 1rem 4rem;
+    transition: all .3s ease;
+}
+.Portfolio .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.Portfolio .wrapper .card{
+    width: 310px;
+    height: 170px;
+    padding: 2rem 1rem;
+    margin: 10px;
+    /* background: #fff; */
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    /* box-shadow: 0px 7px 10px rgb(0 0 0 / 50%); */
+    transition: all .3s ease;
+}
+.Portfolio .wrapper .card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(176, 0, 0, 0.5),rgb(201, 61, 61));
+    z-index: 2;
+    transition: all .3s ease;
+    opacity: 0;
+}
+.Portfolio .wrapper .card:hover:before{
+    opacity: 1;
+}
+.Portfolio .wrapper .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.Portfolio .wrapper .card .info{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all .3s ease;
+}
+.Portfolio .wrapper .card .info h1{
+    font-size: 18px;
+    margin: 0 0 15px 0;
+    font-weight: 800;
+}
+.Portfolio .wrapper .card .info a{
+    background: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all .3s ease;
+}
+.Portfolio .wrapper .card .info a:hover{
+    color: #FF0000;
+}
+.Portfolio .wrapper .card .info p{
+    margin: 0 0 20px 0;
+}
+.Portfolio .wrapper .card:hover .info{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
+
+
+.modal{
+    position: fixed;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    background-color: #fff;
+    padding: 30px 50px;
+    border-radius: 5px;
+    width: 600px;
+    max-width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.452);
+}
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal-header{
+    padding: 10px 15px 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-header h1{
+    font-size: 30px;
+    font-weight: 800;
+    margin-left: 190px;
+}
+.modal-header .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 25px;
+}
+#overlay{
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+#overlay.active{
+    pointer-events: all;
+    opacity: 1;
+}
+.modal__dialogw{
+    width: 600px;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+.modal__dialogw .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+}
+.modal__dialogw .row100 .col{
+    position: relative;
+    width: 97%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+.modal__dialogw .row100 .col .inputBox{
+    position: relative;
+    width: 100%;
+    height: 40px;   
+    color: #999;
+}
+.modal__dialogw .row100 .col .inputBox input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #fff;
+    margin-left: -18rem;
+}
+.modal__dialogw .row100 .col .inputBox .text_span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.modal__dialogw .row100 .inputBox input:focus + .text_span,
+.modal__dialogw .row100 .inputBox input:valid + .text_span{
+    top: -35px;
+    left: -10px;
+}
+.modal__dialogw .row100 .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #ff0000;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.modal__dialogw .row100 .inputBox input:focus ~ .line,
+.modal__dialogw .row100 .inputBox input:valid ~ .line{
+    height: 100%;
+}
+.modal__dialogw .row100 .cola input{
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background: #ff0000;
+    color: #fff;
+    margin: 1rem 5rem;
+    font-size: 18px;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1286px){
+    .Portfolio .text-box .button {
+        width: 395px;
+    }
+}
+@media (max-width: 1170px){
+    .Portfolio .wrapper .card {
+        width: 240px;
+    }
+}
+@media (max-width: 890px){
+    .loader {
+        left: calc(23vw - 75px);
+    }
+}
+@media (max-width: 750px){
+    .icon{
+        display: block;
+    }
+    .icon.hide{
+        display: none;
+    }
+    .loader {
+        position: absolute;
+        top: calc(50vh - 75px);
+        left: calc(30vw - 75px);
+        font-size: 60px;
+    }
+    .navber{
+        background: none;
+    }
+    .navber .content .menu-lier{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        max-width: 400px;
+        height: 100vh;
+        margin-top: 0;
+        padding: 0 40px;
+        text-align: center;
+        transition: all .3s ease;
+        background: #000;
+    }
+    .navber .content .menu-lier.sticve{
+        left: 0;
+    }
+    .navber .content .menu-lier li{
+        margin-top: 35px;
+    }
+    .navber .content .menu-lier li a{
+        font-size: 25px;
+    }
+}
+@media (max-width: 690px){
+    .loader {
+        left: calc(22vw - 75px);
+    }
+}
+@media (max-width: 640px){
+    .Portfolio {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .Portfolio .text-box {
+        position: relative;
+    }
+    .modal__dialogw {
+        width: 370px;
+    }
+    .modal__dialogw .row100 .col .inputBox input {
+        width: 96%;
+        margin-left: -11rem;
+    }
+    .modal__dialogw .row100 .col {
+        width: 97%;
+    }
+    .modal {
+        width: 370px;
+    }
+} 
+@media (max-width: 634px){
+    .loader {
+        left: calc(28vw - 75px);
+        font-size: 44px;
+    }
+} 
+@media (max-width: 480px){
+    .navber .content .menu-lier {
+        left: -140%;
+    }
+}
+@media (max-width: 440px){
+    .navber .content .menu-lier {
+        padding: 0;
+    }
+    .Portfolio .text-box {
+        max-width: 380px;
+        padding: 1rem 0 1rem 1rem;
+    }
+}
+@media (max-width: 420px){
+    .loader {
+        font-size: 43px;
+    }
+    .navber .content .menu-lier {
+        left: -130%;
+    }
+    .navber .content .menu-lier {
+        padding: 0;
+    }
+    .banner .tenner {
+        text-align: center;
+        max-width: 180px;
+        padding: 15px 15px 15px 3rem;
+        height: 6vh;
+    }
+    .banner .tenner {
+        text-align: center;
+        max-width: 180px;
+        padding: 15px 5px 15px 1rem;
+        height: 5vh;
+    }
+    .banner .tenner h1{
+        font-size: 25px;
+    }
+    .Portfolio .text-box .button button {
+        padding: 0rem 1rem;
+    }
+    .Portfolio .text-box .button button:hover {
+        padding: 0 1rem;
+    }
+    .modal {
+        width: 250px;
+    }
+    .modal-header h1 {
+        font-size: 27px;
+    }
+    .modal__dialogw {
+        width: 250px;
+    }
+    .modal__dialogw .row100 .col {
+        width: 92%;
+    }
+    .modal__dialogw .row100 .col .inputBox input {
+        width: 96%;
+        margin-left: -7.5rem;
+    }
+    .modal__dialogw .row100 .cola input {
+        border: none;
+        padding: 7px 35px;
+        cursor: pointer;
+        outline: none;
+        background: #ff0000;
+        color: #fff;
+        margin: 1rem 2rem;
+        font-size: 18px;
+        border-radius: 2px;
+    }
+}
+@media (max-width: 400px){
+    .Portfolio .text-box .button {
+        width: 297px;
+    }
+}
+@media (max-width: 370px){
+    .loader {
+        font-size: 39px;
+    }
+    .Portfolio .text-box h1 {
+        max-width: 315px;
+        font-size: 25px;
+    }
+    .banner .text .tenner {
+        padding: 15px 15px 15px 3rem;
+        height: 5vh;
+    }
+    .banner .text .tenner h1{
+        font-size: 25px;
+    }
+}
+@media (max-width: 320px){
+    .loader {
+        left: calc(30vw - 75px);
+        font-size: 35px;
+    }
+}
+@keyframes flashing-border{ 
+    0%{ 
+        border: none; 
+    } 
+    50%{ 
+        border: none; 
+    } 
+    100%{ 
+        border: none; 
+    } 
+} 
+ 
+@keyframes printed-text{ 
+    from{ 
+        width: 0; 
+    } 
+}

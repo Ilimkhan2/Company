@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isoft</title>
+    <link rel="short icon" href="./img/IT-компания «ISOFT».png">
+    <link rel="stylesheet" href="./css/stype.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+<body>
+    <div class="loader_bg">
+        <h1 class="loader"> <span>Inclusive</span> soft</h1> 
+    </div>
+
+    <nav class="navber">
+        <div class="content">
+            <div class="logo"><a href="#"><img src="./img/IT-компания «ISOFT».png" alt=""></a></div>
+            <ul class="menu-lier">
+                <div class="icon cancel-ber">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="Portfolio.html">Портфолио</a></li>
+                <li><a href="Shop.html">Магазин</a></li>
+                <li><a href="About.html">О нас</a></li>
+                <li><a href="Blog.html">Блог</a></li>
+                <li><a href="Service.html">Сервис</a></li>
+                <li><a href="Contacts.html">Контакты</a></li>
+            </ul> 
+            <div class="icon menu-ber">
+                <i class="fa fa-align-justify" aria-hidden="true"></i>
+            </div>  
+        </div>
+    </nav>
+
+    <div class="batter">
+        <div class="divber">
+            <p>Мы - Isoft</p>
+            <h1>lsoft - команда, которая помогает клиентам определить задачи проекта, надежно его</h1>
+            <div class="button">
+                <a data-modal-target="#modal" href="#">Отправить</a>
+            </div>
+        </div>
+        <div class="img"></div>    
+    </div>
+
+
+
+    <div class="modal" id="modal">
+        <div class="modal-weader">
+            <h1>МЫ СВЯЖЕМСЯ С ВАМИ КАК МОЖНО БЫСТРЕЕ!</h1>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="item-text">
+            <div class="modal__dialogw">
+                <form action="#">
+                    <div class="row100">
+                        <div class="col">
+                            <div class="inputBox">
+                                <input type="text_span" name="" required="требуемый">
+                                <span class="text_span">Ваш телефон</span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="inputBox">
+                                <input type="text_span" name="" required="требуемый">
+                                <span class="text_span">Ваше имя</span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="row100">
+                            <div class="cola">
+                                <input type="submit" value="Отправить">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="./js/javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+        }, 1100);
+    </script>
+    <script>
+        const menu = document.querySelector(".menu-lier");
+        const menuBer = document.querySelector(".menu-ber");
+        const cancelBer = document.querySelector(".cancel-ber");
+
+        menuBer.onclick = () =>{
+            menu.classList.add("sticve");
+            menuBer.classList.add("hide");
+        }
+        cancelBer.onclick = () =>{
+            menu.classList.remove("sticve");
+            menuBer.classList.remove("hide");
+        }
+        window.onscroll = () =>{
+            this.scrollY > 20 ? navBer.classList.add("actcve") : navBer.classList.remove("actcve");
+        }
+    </script>
+</body>
+</html>

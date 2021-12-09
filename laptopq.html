@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i soft</title>
+    <link rel="short icon" href="./img/IT-компания «ISOFT».png">
+    <link rel="stylesheet" href="./css/bra.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navber">
+        <div class="content">
+            <div class="logo"><a href="#"><img src="./img/IT-компания «ISOFT» белый.png" alt=""></a></div>
+            <ul class="menu-lier">
+                <div class="icon cancel-ber">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="Portfolio.html">Портфолио</a></li>
+                <li><a href="Shop.html">Магазин</a></li>
+                <li><a href="About.html">О нас</a></li>
+                <li><a href="Blog.html">Блог</a></li>
+                <li><a href="Service.html">Сервис</a></li>
+                <li><a href="Contacts.html">Контакты</a></li>
+            </ul> 
+            <div class="icon menu-ber">
+                <i class="fa fa-align-justify" aria-hidden="true"></i>
+            </div> 
+        </div>
+    </nav>
+
+
+
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="product-box">
+                <div class="all-images">
+                    <div class="sall-images">
+                        <img src="./img/Asus.png"  onclick="clickimg(this)">
+                        <img src="./img/Asus1.png" onclick="clickimg(this)">
+                        <img src="./img/Asus2.png" onclick="clickimg(this)">
+                        <img src="./img/Asus3.png" onclick="clickimg(this)">
+                    </div>
+                    <div class="main-images">
+                        <img src="./img/Asus.png" id="imagebox">
+                    </div>
+                </div>
+            </div>
+            <div class="min-tilems">
+                <h6>Магазин / Asus</h6>
+                <h3 class="py-3">Asus ROG STRIX G513Q AMD Ryzen 9 5900HX</h3>
+                <h2>196768 сом</h2>
+                <button data-modal-target="#modal">В корзину</button>
+                <button data-modal-target="#modall" class="media">Купить в 1 клик</button>
+                <div class="text">
+                    <h4 class="mt-4 mb-4">Характеристики: <br>
+                        Диагональ экрана ................................ 15.6"-17.3" <br>
+                        Класс ноутбука .................................... Игровой <br>
+                        Объем оперативной памяти ............... 12 и более <br>
+                        Производитель ..................................... Asus <br>
+                        Тип накопителя .................................... SSD
+                    </h4>
+                    <a href="#">Все характеристики</a>
+                </div>
+            </div> 
+        </div>
+        <div class="item">
+            <h2>Непревзойденное удобство</h2>
+            <h3>Asus ROG STRIX G513Q AMD Ryzen 9 5900HX</h3>
+            <p>Основной дисплей	 15,6", 2560 × 1440, IPS, 165 Гц 15,6", 1920 × 1080, IPS, 300 Гц</p>
+            <p>Центральный процессор  AMD Ryzen 9 5900HX</p>
+            <p>Видеокарта AMD Radeon RX 6800M, 12 Гбайт GDDR6</p>
+            <p>Оперативная память  До 32 Гбайт, DDR4-3200</p>
+            <p>Установка накопителей 1 × M.2 в режиме PCI Express x4 3.0 / SATA 6 Гбит/с</p>
+            <p>Интерфейсы 3 × USB 3.2 Gen1 Type-A, 1 × USB 3.2 Gen2 Type-C,1 × 3,5-мм мини-джек,1 × HDMI,1 × RJ-45</p>
+            <p>Встроенный аккумулятор 90 Вт⋅ч</p>
+            <p>Внешний блок питания 280 Вт</p>
+            <p>Размеры 354 × 259 × 27 мм</p>
+            <p>сканер отпечатков пальцев</p>
+            <p>Масса ноутбука 2,5 кг</p>
+            <p>Операционная система Windows 10 Home, Windows 10 Pro</p>
+            <p>Гарантия 2 года</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <h1>Товар добавлен в корзину</h1>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <img src="./img/Asus.png">
+            <div class="text">
+                <h2>Asus ROG STRIX</h2>
+                <p>196768 сом / шт</p>
+            </div>
+        </div>
+        <div class="button">
+            <button class="thr">Продолжить</button>
+            <button class="thr">Купить</button>
+        </div>
+    </div>
+    
+    <div class="modal" id="modall">
+        <div class="modal-weader">
+            <h1>Купить в один клик</h1>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-item">
+            <div class="item-img">
+                <img src="./img/Asus.png"></h2>
+                <h2>Asus ROG STRIX</h2>
+                <p>196768 сом / шт</p>
+            </div>
+            <div class="item-text">
+                <h2>Заполните данные для заказа</h2>
+                <div class="modal__dialogw">
+                    <form action="#">
+                        <div class="row100">
+                            <div class="col">
+                                <div class="inputBox">
+                                    <input type="text_span" name="" required="требуемый">
+                                    <span class="text_span">Ваш телефон</span>
+                                    <span class="line"></span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="inputBox">
+                                    <input type="text_span" name="" required="требуемый">
+                                    <span class="text_span">Ваше имя</span>
+                                    <span class="line"></span>
+                                </div>
+                            </div>
+                            <div class="row100">
+                                <div class="cola">
+                                    <input type="submit" value="Отправить">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="active" id="overlay"></div>
+
+
+
+
+
+    <script src="./js/javascript.js"></script>
+    <script>
+        const navBer = document.querySelector(".navber");
+        const menu = document.querySelector(".menu-lier");
+        const menuBer = document.querySelector(".menu-ber");
+        const cancelBer = document.querySelector(".cancel-ber");
+
+        menuBer.onclick = () =>{
+            menu.classList.add("sticve");
+            menuBer.classList.add("hide");
+        }
+        cancelBer.onclick = () =>{
+            menu.classList.remove("sticve");
+            menuBer.classList.remove("hide");
+        }
+        window.onscroll = () =>{
+            this.scrollY > 20 ? navBer.classList.add("actcve") : navBer.classList.remove("actcve");
+        }
+    </script>
+    <script>
+        function clickimg(smallIg){
+            var fullImg = document.getElementById("imagebox");
+            fullImg.src = smallIg.src
+        }
+    </script>
+</body>
+</html>
